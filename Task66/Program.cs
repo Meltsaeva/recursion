@@ -5,11 +5,28 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-int Recursion(int m, int n) 
+Console.Clear();
+int Prompt(string message)
 {
-    if (m < n)
-        return 0;  
-    return (n + Recursion(n - 1));
+  Console.Write(message);
+  int result = Convert.ToInt32(Console.ReadLine());
+  return result;
 }
 
-Console.WriteLine(Recursion(1, 15));
+int Sum(int m, int n) 
+{
+    if (m == n)
+        return m;  
+    return (Sum(m, n - 1) + n);
+}
+
+int m = Prompt("Input M: ");
+
+int n = Prompt("Input N: ");
+if (n < m)
+{
+  Console.WriteLine("Input n > m");
+  return;
+}
+
+Console.WriteLine(Sum(m, n));
