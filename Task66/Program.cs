@@ -10,7 +10,7 @@ int Prompt(string message)
 {
   Console.Write(message);
   int result = Convert.ToInt32(Console.ReadLine());
-  return result;
+    return result;
 }
 
 int Sum(int m, int n) 

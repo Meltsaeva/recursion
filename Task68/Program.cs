@@ -8,19 +8,20 @@ int Prompt(string message)
 {
   Console.Write(message);
   int result = Convert.ToInt32(Console.ReadLine());
-  return result;
+    return result;
 }
 
 int Aсkerman(int m, int n) 
 {
     if (m == 0) 
-    return (n + 1); 
+      return (n + 1); 
 
-    if (m > 0 && n == 0) 
-    return Aсkerman(m - 1, 1);
+    else
+      if (m > 0 && n == 0) 
+        return Aсkerman(m - 1, 1);
 
     else 
-    return Aсkerman(m - 1, Aсkerman(m, n - 1));
+      return Aсkerman(m - 1, Aсkerman(m, n - 1));
 }
 
 int m = Prompt("Input M: ");
