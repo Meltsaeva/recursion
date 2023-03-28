@@ -5,12 +5,17 @@
 //N = 5 -> "5, 4, 3, 2, 1"
 //N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-int Recursion (int n);
-{
-    int result;
 
-    if (n == 1) 
-        return 0;
-    result = n + 1;
-    return result;
+int Recursion(int n) 
+{
+    if (n == 2)
+    {  
+        Console.Write($"{n}, ");
+        return 1;
+    }  
+    Console.Write($"{n}, ");  
+    return Recursion(n - 1);
+
 }
+
+Console.WriteLine(Recursion(8));
